@@ -1,0 +1,34 @@
+iframe {
+  display: none;
+}
+
+.add-lounasmesta {
+  background: #66FF66;
+  font-size: 200%;
+  font-weight: bold;
+  cursor: pointer;
+}
+.add-lounasmesta:hover {
+  background: #66FFF6;
+}
+
+.lounas-title {
+  font-size: 200%;
+  font-weight: bold;
+  background: #66FF66; /* Old browsers */
+  background: -moz-linear-gradient(right, #66FF66 0%, #A1FF5E 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left, right, color-stop(0%,#66FF66), color-stop(100%,#A1FF5E)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(right, #66FF66 0%,#A1FF5E 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(right, #66FF66 0%,#A1FF5E 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(right, #66FF66 0%,#A1FF5E 100%); /* IE10+ */
+  background: linear-gradient(to right, #66FF66 0%,#A1FF5E 100%); /* W3C */
+}
+
+.lounasmesta-row {
+  width: 100%;
+}
+
+.lounasmesta-name {
+  font-weight: bold;
+  font-size: 120%;
+}

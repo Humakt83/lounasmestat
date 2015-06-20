@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lounasmestat</title>
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<meta charset="UTF-8">
+</head>
+
+<body ng-app="lounasmestat">
+	<div class="collapse navbar-collapse site-header" ng-controller="MainController">
+		<div class="row"> 
+			<div class="lounas-title col-xs-11">Lounasmestat</div>
+			<div class="add-lounasmesta col-xs-1" ng-click="addMestaDialog()">+</div>
+		</div>
+		
+		<div class="lounasmesta-row" ng-repeat="lounasmesta in lounasmestat">
+			<iframe ng-src="{{lounasmesta.url}}" ></iframe>
+			<div class="lounasmesta-name" ng-style="lounasmesta.color.toStyle()">{{lounasmesta.name}}</div>
+		</div>
+    </div>
+	
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+	<script type="text/javascript" src="scripts/lounasmestat.js"></script>
+</body>
+</html>
