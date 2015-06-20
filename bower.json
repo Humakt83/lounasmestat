@@ -1,0 +1,28 @@
+{
+  "name": "lounasmestat",
+  "version": "0.1.0",
+  "authors": [
+    "Risto Salama"
+  ],
+  "description": "Lounasmestat, palvelu mikä näyttää päivän menun lisäämillesi lounaspaikoille",
+  "main": "app/index.html",
+  "keywords": [
+    "lounas",
+    "lunch",
+    "menu"
+  ],
+  "license": "MIT",
+  "homepage": "ukkosnetti.fi",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.1",
+    "jquery": "~2.1.4"
+  }
+}
