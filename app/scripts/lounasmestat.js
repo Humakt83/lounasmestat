@@ -1,10 +1,10 @@
 'use strict'
 
-angular.module('lounasmestat', ['ui.bootstrap']).config(function($sceProvider) {
+angular.module('lounasmestat', ['ngResource', 'ui.bootstrap']).config(function($sceProvider) {
 	$sceProvider.enabled(false);
 })
 
-angular.module('lounasmestat').controller('MainController', ['$scope', '$modal', '$sce', function($scope, $modal) {
+angular.module('lounasmestat').controller('MainController', ['$scope', '$modal', '$sce', 'LounasMenu', function($scope, $modal, LounasMenu) {
 		
 	$scope.lounasmestat = [];
 	
@@ -15,6 +15,12 @@ angular.module('lounasmestat').controller('MainController', ['$scope', '$modal',
 		})
 
         modalInstance.result.then(function (result) {
+			console.log(LounasMenu)
+			LounasMenu.post({}, result, function(res) {
+				console.log(res)
+			}, function(error) {
+				console.log(error)
+			})
 			$scope.lounasmestat.push(result)
 		})
 	}
@@ -53,3 +59,9 @@ angular.module('lounasmestat').factory('LounasColor', function() {
 		}
 	}
 })
+
+angular.module('lounasmestat').factory('LounasMenu', ['$resource', function($resource) {
+	return $resource('http:localhost:8080/parse/', {}, {
+        post: { method:'POST' }
+    })
+}])

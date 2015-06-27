@@ -15,14 +15,16 @@
 		</div>
 		
 		<div class="lounasmesta-row" ng-repeat="lounasmesta in lounasmestat">
-			<iframe ng-src="{{lounasmesta.url}}" ></iframe>
+			<iframe id="{{lounasmesta.name}}" ng-src="{{lounasmesta.url}}" ></iframe>
 			<div class="lounasmesta-name" ng-style="lounasmesta.color.toStyle()">{{lounasmesta.name}}</div>
+			<div class="lounasmesta-menu">{{lounasmesta.name}}</div>
 		</div>
     </div>
 	
 	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular-resource/angular-resource.min.js"></script>
 	<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 	<script type="text/javascript" src="scripts/lounasmestat.js"></script>
 </body>
